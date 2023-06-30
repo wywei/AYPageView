@@ -42,7 +42,7 @@ class ContentView: UIView {
         v.dataSource = self
         v.scrollsToTop = false
         v.bounces = false
-        v.register(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "reuse")
+        v.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "reuse")
         return v
     }()
     

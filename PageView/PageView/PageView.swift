@@ -36,7 +36,7 @@ class PageView: UIView {
 extension PageView {
     
     public func setSelectIndex(_ index: Int) {
-        guard index >= 0, index < childrenVc.count else {
+        guard index >= 0, index < childrenVc.count, index < titles.count else {
             fatalError("PageView:请传入合法的下标")
         }
         titleView.setTitle(progress: 1, sourceIndex: 0, targetIndex: index)
